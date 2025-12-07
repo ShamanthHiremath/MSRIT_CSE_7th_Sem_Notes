@@ -1,0 +1,43 @@
+# Question 2: Demonstrate the updation of image in live container in a pod using command line
+# as well as by updating yaml files.
+# File: nginx-deployment-update.yaml
+# Note: Replace 'usn' with your USN (e.g., ms99cs001)
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: usn-nginx-deployment
+  namespace: usn
+  labels:
+    app: usn-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: usn-nginx
+  template:
+    metadata:
+      labels:
+        app: usn-nginx
+    spec:
+      containers:
+      - name: nginx
+        image: 172.1.14.168:5001/nginx
+        ports:
+        - containerPort: 80
+
+# Commands to run:
+# 1. Apply initial deployment:
+#    kubectl apply -f nginx-deployment-update.yaml
+#
+# 2. Update image using command line:
+#    kubectl set image deployment/usn-nginx-deployment nginx=172.1.14.168:5001/nginx:latest --namespace=usn
+#
+# 3. Verify the update:
+#    kubectl describe deploy usn-nginx-deployment --namespace=usn | grep Image
+#
+# 4. Check rollout status:
+#    kubectl rollout status deployment/usn-nginx-deployment --namespace=usn
+#
+# 5. Alternative: Update YAML file (change image version above) and apply:
+#    kubectl apply -f nginx-deployment-update.yaml

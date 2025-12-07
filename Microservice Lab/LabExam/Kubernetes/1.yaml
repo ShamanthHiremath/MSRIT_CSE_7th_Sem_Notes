@@ -1,0 +1,46 @@
+# Question 1: Create a simple deployment of the given app with name of your choice and 3 replicas of
+# pods. Check the status of pod by sending request. App should be accessed from outside the cluster.
+# File: nginx-deployment.yaml
+# Note: Replace 'usn' with your USN starting as "ms" (e.g., ms99cs001)
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: usn-nginx-deployment
+  namespace: usn
+  labels:
+    app: usn-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: usn-nginx
+  template:
+    metadata:
+      labels:
+        app: usn-nginx
+    spec:
+      containers:
+      - name: nginx
+        image: 172.1.14.168:5001/nginx
+        ports:
+        - containerPort: 80
+
+# Commands to run:
+# 1. Create namespace:
+#    kubectl create namespace usn
+#
+# 2. Apply deployment:
+#    kubectl apply -f 1.yaml
+#
+# 3. Check pods status:
+#    kubectl get pods --namespace=usn
+#
+# 4. Expose deployment:
+#    kubectl expose deployment usn-nginx-deployment --type=NodePort --name=usn-nginx-service --namespace=usn
+#
+# 5. Get exposed port:
+#    kubectl get svc --namespace=usn
+#
+# 6. Access in browser:
+#    http://172.1.14.168:<NodePort>

@@ -1,0 +1,31 @@
+# Question 4: Create a Pod with ubuntu image and a command to echo "YOUR_NAME" which overrides
+# the default CMD/ENTRYPOINT of the image. Delete pod.
+# File: ubuntu-pod.yaml
+# Note: Replace 'usn' with your USN and update the echo message with your name
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-pod
+  namespace: usn
+  labels:
+    app: ubuntu
+spec:
+  containers:
+  - name: ubuntu
+    image: 172.1.14.168:5001/ubuntu
+    command: ["/bin/bash"]
+    args: ["-c", "echo YOUR_NAME"]
+
+# Commands to run:
+# 1. Apply the pod configuration:
+#    kubectl apply -f 4.yaml
+#
+# 2. Check pod status:
+#    kubectl get pods --namespace=usn
+#
+# 3. View the logs (to see the echo output):
+#    kubectl logs ubuntu-pod --namespace=usn
+#
+# 4. Delete the pod:
+#    kubectl delete pod ubuntu-pod --namespace=usn

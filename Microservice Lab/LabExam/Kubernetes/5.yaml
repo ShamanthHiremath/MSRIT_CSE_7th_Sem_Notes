@@ -1,0 +1,34 @@
+# Question 5: Create a Pod that runs one container. The configuration file for the Pod defines
+# a command and arguments by using environment variables. Delete pod.
+# File: ubuntu-env-pod.yaml
+# Note: Replace 'usn' with your USN
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-env-pod
+  namespace: usn
+  labels:
+    app: ubuntu-env
+spec:
+  containers:
+  - name: ubuntu-env
+    image: 172.1.14.168:5001/ubuntu
+    env:
+    - name: MESSAGE
+      value: "Hello MSRIT"
+    command: ["/bin/echo"]
+    args: ["$(MESSAGE)"]
+
+# Commands to run:
+# 1. Apply the pod configuration:
+#    kubectl apply -f ubuntu-env-pod.yaml
+#
+# 2. Check pod status:
+#    kubectl get pods --namespace=usn
+#
+# 3. View the logs (to see environment variable output):
+#    kubectl logs ubuntu-env-pod --namespace=usn
+#
+# 4. Delete the pod:
+#    kubectl delete pod ubuntu-env-pod --namespace=usn

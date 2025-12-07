@@ -1,0 +1,46 @@
+# Question 7: Create 2 Pods on the same node. Demonstrate Pod to Pod communication through Pod IP.
+# File: pod2-network.yaml (Pod 2 with httpd)
+# Note: Replace 'usn' with your USN
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod2-httpd
+  namespace: usn
+spec:
+  containers:
+  - name: httpd-container
+    image: 172.1.14.168:5001/httpd
+    ports:
+    - containerPort: 80
+
+# Commands to run:
+# 1. Apply both pod configurations:
+#    kubectl apply -f pod1-network.yaml
+#    kubectl apply -f pod2-network.yaml
+#
+# 2. Get both pods with their IP addresses:
+#    kubectl get pods --namespace=usn -o wide
+#    OR
+#    kubectl get pod pod1-nginx --namespace=usn -o custom-columns=NAME:metadata.name,IP:status.podIP
+#    kubectl get pod pod2-httpd --namespace=usn -o custom-columns=NAME:metadata.name,IP:status.podIP
+#
+# 3. Access pod1 shell:
+#    kubectl exec --namespace=usn pod1-nginx -it -- /bin/bash
+#
+# 4. Inside pod1, install curl and test communication:
+#    apt update
+#    apt install -y curl
+#    curl localhost:80
+#    curl <pod2_ip>:80
+#    exit
+#
+# 5. Access pod2 shell:
+#    kubectl exec --namespace=usn pod2-httpd -it -- /bin/bash
+#
+# 6. Inside pod2, install curl and test communication:
+#    apt update
+#    apt install -y curl
+#    curl localhost:80
+#    curl <pod1_ip>:80
+#    exit

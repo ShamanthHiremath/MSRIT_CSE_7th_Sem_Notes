@@ -1,0 +1,38 @@
+# Question 6: Create a manifest file for creating a pod with 2 containers. Demonstrate container
+# to container communication and display "Ubuntu" container log entry.
+# File: multi-container-pod.yaml
+# Note: Replace 'usn' with your USN
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multi-container-pod
+  namespace: usn
+spec:
+  containers:
+  - name: ubuntu-container
+    image: 172.1.14.168:5001/ubuntu
+    command: ["/bin/bash", "-c", "while true; do echo Hello from Ubuntu; sleep 5; done"]
+  - name: httpd-container
+    image: 172.1.14.168:5001/httpd
+    ports:
+    - containerPort: 80
+
+# Commands to run:
+# 1. Apply the pod configuration:
+#    kubectl apply -f 6.yaml
+#
+# 2. Check pod status:
+#    kubectl get pods --namespace=usn
+#
+# 3. Access ubuntu container shell:
+#    kubectl exec --namespace=usn multi-container-pod -it -c ubuntu-container -- /bin/bash
+#
+# 4. Inside the ubuntu container, install curl and test communication:
+#    apt update
+#    apt install -y curl
+#    curl localhost:80
+#    exit
+#
+# 5. View ubuntu container logs:
+#    kubectl logs multi-container-pod -c ubuntu-container --namespace=usn

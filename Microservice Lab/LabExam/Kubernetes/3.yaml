@@ -1,0 +1,28 @@
+# Question 3: Perform the following.
+# a) Create 3 pods with names nginx1, nginx2, nginx3. All of them should have the label app=v1
+#    Show all labels of the pods.
+# b) Get only the 'app=v2' pods.
+# c) Remove the 'app' label from the pods we created before.
+# Note: This question uses kubectl commands only (no YAML file needed)
+# Replace 'usn' with your USN (e.g., ms99cs001)
+
+# Commands to run:
+# 1. Create namespace (if not already created):
+#    kubectl create namespace usn
+#
+# 2. Create 3 pods with label app=v1:
+#    kubectl run usn-nginx1 --image=nginx --restart=Never --labels=app=usn-v1 --namespace=usn
+#    kubectl run usn-nginx2 --image=nginx --restart=Never --labels=app=usn-v1 --namespace=usn
+#    kubectl run usn-nginx3 --image=nginx --restart=Never --labels=app=usn-v1 --namespace=usn
+#
+# 3. Show all labels of the pods:
+#    kubectl get pods --show-labels --namespace=usn
+#
+# 4. Get only the 'app=v2' pods (should return empty initially):
+#    kubectl get pods -l app=usn-v2 --namespace=usn
+#
+# 5. Remove the 'app' label from the pods:
+#    kubectl label pod usn-nginx1 usn-nginx2 usn-nginx3 app- --namespace=usn
+#
+# 6. Verify labels are removed:
+#    kubectl get pods --show-labels --namespace=usn 

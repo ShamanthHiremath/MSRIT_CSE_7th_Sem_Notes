@@ -1,0 +1,22 @@
+####open first command prompt
+cd customer_service
+mvnw spring-boot:run
+http://localhost:3001/customers
+http://localhost:3001/1
+
+####open second command prompt
+cd order_service
+mvnw spring-boot:run
+http://localhost:3002/orders
+http://localhost:3002/1
+
+####open third command prompt
+cd discovery_service
+mvnw spring-boot:run
+http://localhost:3000
+
+####open fourth command prompt
+cd gateway_service
+mvnw spring-boot:run
+http://localhost:3081/customers
+http://localhost:3081/orders
