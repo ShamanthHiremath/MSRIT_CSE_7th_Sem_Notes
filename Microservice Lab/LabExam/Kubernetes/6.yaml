@@ -30,7 +30,7 @@ spec:
 #
 # 4. Inside the ubuntu container, install curl and test communication:
 #    apt update
-#    apt install -y curl
+#    apt install curl
 #    curl localhost:80
 #    exit
 #

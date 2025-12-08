@@ -1,0 +1,6 @@
+1. start with Model, Model has jakarta or javax imports with CITE. Its simple with getters and setters.
+2. Then Repository interface extending JpaRepository<Book, String> . It has nothing to be done. Imports are Model and JpaRepository and Repository annotation.
+3. Then Service class with @Service annotation. imports are Model, and Repository, with List. It has methods for CRUD operations. Simmple defined findAll, findById, save, deleteById, deleteAll methods. Only update is complex, first findById, then set new values, then save.
+4. Then Controller class with @RestController and @RequestMapping("/books") annotations. imports are Model, Service, List, Optional, and Spring web annotations. It has methods for CRUD operations mapped to HTTP methods. It uses @GetMapping, @PostMapping, @DeleteMapping, @PutMapping annotations. Each method calls corresponding service method. The PathVariable annotations are used for parameters in header url. while RequestBody annotation is used for parameters in body.
+5. application.properties file with spring.jpa.hibernate.ddl-auto=update, spring.datasource.url="jdbc:mysql://localhost:3306/your_database", username=root, password=, driver-class-name=com.mysql.cj.jdbc.Driver, server.port=8081
+

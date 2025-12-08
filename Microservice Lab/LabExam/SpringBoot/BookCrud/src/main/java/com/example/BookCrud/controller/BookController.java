@@ -32,7 +32,7 @@ public class BookController {
     @DeleteMapping("/deleteBook/{bookId}")
     public String deleteBook(@PathVariable String bookId) {
         bookService.delete(bookId);
-        return "Employee Deleted";
+        return "Book Deleted";
     }
 
     @PutMapping("/updateBook/{bookId}")

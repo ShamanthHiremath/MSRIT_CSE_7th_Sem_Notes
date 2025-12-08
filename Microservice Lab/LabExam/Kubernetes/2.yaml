@@ -35,9 +35,3 @@ spec:
 #
 # 3. Verify the update:
 #    kubectl describe deploy usn-nginx-deployment --namespace=usn | grep Image
-#
-# 4. Check rollout status:
-#    kubectl rollout status deployment/usn-nginx-deployment --namespace=usn
-#
-# 5. Alternative: Update YAML file (change image version above) and apply:
-#    kubectl apply -f nginx-deployment-update.yaml

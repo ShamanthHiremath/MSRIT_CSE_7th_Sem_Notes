@@ -21,16 +21,19 @@ spec:
 #
 # 2. Get both pods with their IP addresses:
 #    kubectl get pods --namespace=usn -o wide
+
+
 #    OR
 #    kubectl get pod pod1-nginx --namespace=usn -o custom-columns=NAME:metadata.name,IP:status.podIP
 #    kubectl get pod pod2-httpd --namespace=usn -o custom-columns=NAME:metadata.name,IP:status.podIP
 #
+
+
+
 # 3. Access pod1 shell:
 #    kubectl exec --namespace=usn pod1-nginx -it -- /bin/bash
 #
-# 4. Inside pod1, install curl and test communication:
-#    apt update
-#    apt install -y curl
+# 4. Inside pod1, test communication:
 #    curl localhost:80
 #    curl <pod2_ip>:80
 #    exit
@@ -40,7 +43,7 @@ spec:
 #
 # 6. Inside pod2, install curl and test communication:
 #    apt update
-#    apt install -y curl
+#    apt install curl
 #    curl localhost:80
 #    curl <pod1_ip>:80
 #    exit

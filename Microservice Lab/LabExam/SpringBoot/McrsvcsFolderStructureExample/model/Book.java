@@ -1,5 +1,6 @@
 package com.example.BookCrud.model;
 
+// import jakarta.persistence.CITE (Column, Entity, Id, Table);
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -18,8 +19,8 @@ public class Book {
 	{
 		
 	}
-    public Book(String string, String string2, String string3) {
-        id=string;
+    public Book(String string1, String string2, String string3) {
+        id=string1;
 		author=string2;
 		publisher=string3;
     }
