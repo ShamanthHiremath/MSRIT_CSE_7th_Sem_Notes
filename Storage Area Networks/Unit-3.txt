@@ -1,0 +1,18 @@
+1.	Explain the various variations of the Core-Edge Fabric topology with the help of a diagram.
+2.	Explain the Fibre Channel Protocol Stack and key advantages of FCP.
+3.	Briefly explain the process of zoning in an FC network and illustrate the different types of zoning with a diagram.
+
+4.	Compare the network infrastructure before and after implementing FCoE (Fibre Channel over Ethernet).
+
+5.	Explain Multimode fiber and single-mode fiber
+6.	Illustrate the basic interconnectivity options supported by Fibre Channel architecture with a diagram.
+
+7.	Discuss the importance and functions of different layers in the iSCSI Protocol Stack.
+
+8.	Explain the flow control mechanism in a Fibre Channel (FC) network.
+9.	Describe the process of congestion notification and its management in a network with a diagram.
+
+10.	Explain two topologies of iSCSI implementations and their significance.
+
+12.	Explain the Fibre Channel Protocol Stack and discuss the different port types in a switched fabric.
+13.	Explain F-Port and N-Port

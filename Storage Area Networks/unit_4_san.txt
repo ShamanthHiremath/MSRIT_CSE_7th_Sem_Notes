@@ -1,0 +1,13 @@
+1.	Describe the file-serving environment prior to and after the implementation of file-level virtualization.
+2.	Explain why Content Addressed Storage (CAS) features are essential for storing fixed content effectively.
+3.	The IT department of a department store currently uses tape for data archiving. What are four to five key points you would present to persuade them to adopt a CAS solution instead? How would implementing these suggestions impact the IT department?
+4.	Describe the process of storing and retrieving objects in an Object-Based Storage Device (OBSD).
+5.	Describe six factors that can influence the performance of Network Attached Storage (NAS)
+6.	Explain the working of an I/O operation in NAS and list the benefits of using NAS.
+7.	Explain Content-Addressed Storage, and its key features?
+8.	Explain the components of NAS, with neat diagram.
+9.	Describe the components of an Object-Based Storage Device (OSD) with the aid of a neat diagram.
+10.	NAS implementations
+11.     Compare the benefits of Network-attached storage with General purpose server. 
+12.     How does the use of jumbo frames affect the NAS performance?
+13.     Compare Block-level access versus object-level access. 

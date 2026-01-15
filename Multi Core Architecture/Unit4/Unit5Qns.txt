@@ -1,0 +1,16 @@
+1. Explain how the following can impact the performance of a GPU
+i. Dynamic partitioning of SM resources.
+ii. Data prefetching.
+iii. Loop unrolling.
+
+2. Discuss thread assignment and thread scheduling in CUDA
+3. Apply shared memory in CUDA to optimize a matrix multiplication kernel. Explain how shared memory reduces global memory accesses.
+4. Explain the use of multiple blocks and tiling in CUDA with an example. Why are they needed for parallel execution?
+5. Explain the concept of shared memories in CUDA with an example. What is its advantage?
+6. Describe the technique to reduce global memory traffic.
+
+CIE 2 QnA
+
+https://gemini.google.com/share/0e15e0d381bd
+https://gemini.google.com/share/aeb7cb3834c5
+https://chatgpt.com/g/g-p-6946cf004c18819180d6a2af45e5252f-map/project

@@ -1,0 +1,11 @@
+UNIT 3
+1. Explain the production of ultrasonic waves using piezoelectricity and magnetostriction with relevant diagrams.
+2. What is Doppler Effect? Explain its application in medicine with a block diagram.
+3. Explain MRI system components with schematic diagrams.
+4. Explain the procedure and applications of nuclear cardiac stress test.
+
+Unit 5
+1. Write a note on Personal radiation dosimeters
+2. What are radioactive tracers? Explain any three applications of them.
+3. Explain the principle and procedure of Proton Therapy. 
+4. Write a note on Radiation safety.

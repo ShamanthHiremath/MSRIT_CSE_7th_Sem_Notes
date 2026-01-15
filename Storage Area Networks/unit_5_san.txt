@@ -1,0 +1,23 @@
+1.	A storage array dials a support center automatically whenever an error is detected. The vendor’s representative at the support center can log on to the service processor of the storage array through the Internet to perform diagnostics and repair. Discuss the security concerns in this environment and provide security methods that can be implemented to mitigate any malicious attacks through this gateway.
+2.	Analyze and discuss the three key elements of the risk triad.
+3.	A system has three components and requires all three to function during business hours (8 AM to 5 PM, Monday to Friday). Failures for Component 2 occur as follows:
+Monday: 8 AM to 11 AM
+Tuesday: No failure
+Wednesday: 4 PM to 7 PM
+Thursday: 5 PM to 8 PM
+Friday: 1 PM to 2 PM
+Calculate the Mean Time Between Failures (MTBF), Mean Time to Repair (MTTR), and the availability of Component 2.
+4.	Illustrate the implementation of a fault tolerance model to mitigate single-point failures, including an example.
+5.	Describe the activities involved in storage infrastructure management in detail, providing relevant examples for better understanding.
+6.	Explain the Business Continuity (BC) planning lifecycle with the help of a clear and well-labeled diagram.
+7.	Provide an example to illustrate the importance of monitoring security in a storage array, including a neat and labeled diagram
+8.	Justify how implementing an ILM strategy will directly address the challenges of information management
+9.	Security threats in a management access domain
+10.	Securing the Application Access Domain
+
+
+Dear Students
+SAN portions for CIE2
+Unit 3 , Unit 4 and Unit 5( Securing the Storage Infrastructure: Information Security Framework, Risk Triad, Storage Security Domains. (Chapter 14 – 14.1, 14.2, 14.3)
+Please note in this all the previous year important questions of unit 5 is included, but for cie 2 only  topics from Unit 5( Securing the Storage Infrastructure: Information Security Framework, Risk Triad, Storage Security Domains) will be considered. 
+

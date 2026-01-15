@@ -1,0 +1,32 @@
+Unit-3
+1. Construction of annotated parse tree
+2. Construction of syntax tree for an expression
+3. SDD definition
+4. simple type Declaration int & float
+5. Simple desk calculator
+6. infix to postfix
+7. infix to prefix
+
+Unit-4
+1. different variants of syntax trees
+2. Type Declaration
+3. Type checking
+4. SDD for computing the type and width of basic types and arrays
+5. Quadruples, triples and Indirect triples
+6. address translation for boolean expessions and control statements & switch statements
+7. Backpatching scheme
+
+
+Unit-5
+1. Explain code generation algorithm and generate code for an expression code generation for simplified procedure calls and returns common sub expression elimination with example
+2. main issues in code generation
+3. three address code and construction the basic blocks for the given program segment
+rev=0;
+while(num&gt;=0){
+    dig= num%10;
+    rev=rev*10 +dig;
+}
+
+4. construction of DAG block
+5. different types of instructions used in a simple target machine model and briefly explain each of them
+6. Common sub-expression elimination and dead code elimination
